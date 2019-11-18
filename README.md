@@ -8,88 +8,89 @@ Create a simple job including 3 steps:
 3. Build *docker image* and push it to *Azure Container Registry*.
 4. Deploy the image to your Kubernetes cluster.
 
-![](p1.png)
+![](p-p1.png)
 
 # Step 1: Create a project for your team and connect to your repository on Github.
 1. Access [Azure DevOps Service](https://azure.microsoft.com/en-us/services/devops/).
 2. Click *Start free* to get to Azure DevOps Service dashboard.
 
-![](p2.png)
+![](p-p2.png)
 
 3. Click *New project*. 
 
-![](new-pj.png)
+![](p-new-pj.png)
 
 4. Format project name: "teamname-appname"
 
-![](team-name.png)
+![](p-team-name.png)
 
 5. Access to builds and start a new pipeline.
 
-![](start-build.png)
+![](p-start-build.png)
 
 6. Select *classic editor*.
 
-![](classic.png)
+![](p-classic.png)
 
 7. Connect to your repository on Github.
 
-![](github.png)
+![](p-github.png)
 
-![](github2.png)
+![](p-github2.png)
 
 8. Select empty job template.
 
-![](select-empty.png)
+![](p-select-empty.png)
 
 9. Fill agent secification.
 
-![](agent-spec.png)
+![](p-agent-spec.png)
 
 # Step 2: Build war/jar file by maven.
 
 1. Click on (+) icon to add a new task.
 
-![](agent-spec.png)
+![](p-agent-spec.png)
 
 2. Select maven task type.
 
-![](select-maven.png)
+![](p-select-maven.png)
 
 3. Fill maven build information.
 
-![](fill-maven.png)
+![](p-fill-maven.png)
+
 
 # Step 3: Build and push docker image.
 
 1. Add new task for docker build. 
 
-![](build-docker.png)
+![](p-build-docker.png)
 
 2. Fill docker build specification including selecting Azure Container Registry and fill image name.
 
-![](fill-docker.png)
+![](p-fill-docker.png)
 
 # Step 4: Deploy to your kubernetes cluster.
 
 1. Add new task for kubenetes deployment. 
 
-![](select-kube.png)
+![](p-select-kube.png)
 
 2. Fill kubenetes deployment specification including selecting cluster, namespace (default) and yaml file path. 
 
-![](kube-spec.png)
+![](p-kube-spec.png)
 
 # Step 5: Save and queue and Finish.
 
 1. Save and queue.
 
-![](save.png)
+![](p-save.png)
 
 3. The job is running.
 
-![](running.png)
+![](p-running.png)
 
 4. Checking logs.
 
-![](logs.png)
+![](p-logs.png)
